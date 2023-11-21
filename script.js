@@ -9,7 +9,7 @@ console.log (UcArray.length, "length");
 const numbers = "0123456789";
 var NumArray = numbers.split("");
 console.log (NumArray.length, "length");
-const special = "!@#$%^&*()_+=';:?/><.,"
+const special = "!@#$%^&*()+=';:?/><.";
 var SArray = special.split("");
 console.log (SArray.length, "length");
 var random = Math.floor(Math.random() * 26);
@@ -43,20 +43,23 @@ if (!(criteria1 || criteria2 || criteria3 || criteria4)) {
   return;
 }
 
-if(criteria1) {multiSelect += LcArray;}
-if(criteria2) {multiSelect += UcArray;}
-if(criteria3) {multiSelect += NumArray;}
-if(criteria4) {multiSelect += SArray;}
 
 let password = "";
 for (let i=0; i<criteria; i++) {
-  password += multiSelect[Math.floor(Math.random() * multiSelect.length)];
+
+if(criteria1) {password += LcArray[Math.floor(Math.random() * LcArray.length)];}
+if(criteria2) {password += UcArray[Math.floor(Math.random() * UcArray.length)]}
+if(criteria3) {password += NumArray[Math.floor(Math.random() * NumArray.length)];}
+if(criteria4) {password += SArray[Math.floor(Math.random() * SArray.length)];}
+console.log ("password", password);
+
 }
- console.log (password);
 
 return password;
-
 }
+
+
+
 
 function writePassword() {
   var password = generatePassword();
