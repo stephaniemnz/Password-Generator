@@ -8,4 +8,8 @@
 - Enter decired number of characters (between 8-12).
 - Press 'Ok' to accept the other requirements for the random password.
 
+![Alt text](image.png)
+
+https://stephaniemnz.github.io/Password-Generator/
+
 
